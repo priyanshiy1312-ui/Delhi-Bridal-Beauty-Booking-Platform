@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Appointment | BridalGlow</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">💄 BridalGlow</div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#packages">Packages</a>
+      <a href="index.html#services">Services</a>
+    </nav>
+  </header>
+
+  <!-- BOOKING SECTION -->
+  <section class="booking">
+    <h2>Book Your Appointment</h2>
+
+    <form id="bookingForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+
+      <input type="tel" id="phone" placeholder="Phone Number" required />
+
+      <select id="service" required>
+        <option value="">Select Service / Package</option>
+        <option value="basic">Basic Bridal Package</option>
+        <option value="premium">Premium Bridal Package</option>
+        <option value="luxury">Luxury Bridal Package</option>
+        <option value="hair">Hair Styling</option>
+        <option value="makeup">Bridal Makeup</option>
+      </select>
+
+      <input type="date" id="date" required />
+
+      <input type="time" id="time" required />
+
+      <button type="submit">Confirm Booking</button>
+    </form>
+
+    <!-- SUCCESS MESSAGE -->
+    <div id="successMessage"></div>
+  </section>
+
+  <script>
+    const form = document.getElementById("bookingForm");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+
+      // Basic validation
+      if (phone.length !== 10) {
+        alert("Please enter a valid 10-digit phone number");
+        return;
+      }
+
+      successMessage.innerHTML = `
+        <div class="success-box">
+          <h3>🎉 Booking Confirmed!</h3>
+          <p>Thank you ${name}, your appointment has been scheduled successfully.</p>
+        </div>
+      `;
+
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
