@@ -202,51 +202,107 @@ body {
   }
 }
 
-/* =========================
-   HERO SECTION (IMAGE + OVERLAY)
-========================= */
 .hero {
   height: 85vh;
+  position: relative;
 
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
 
-  position: relative;
+  padding-left: 8%;
 
   background: url("hero.png") center/cover no-repeat;
 }
 
-/* soft white + pink overlay */
+/* soft bridal overlay like reference image */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
+
   background: linear-gradient(
-    135deg,
-    rgba(255,255,255,0.85),
-    rgba(255,230,241,0.6)
+    90deg,
+    rgba(255,255,255,0.88) 0%,
+    rgba(255,240,245,0.75) 40%,
+    rgba(255,255,255,0.2) 100%
   );
+
+  z-index: 1;
 }
 
-/* content above overlay */
+/* content container */
 .hero-content {
   position: relative;
-  max-width: 800px;
-  padding: 20px;
+  z-index: 2;
+
+  max-width: 700px;
 }
 
-.hero h1 {
-  font-size: 48px;
+/* shared line style */
+.hero-line {
+  line-height: 1.05;
+}
+
+/* LINE 1 — black serif */
+.line-1 {
+  font-size: 30px;
+  font-family: "Playfair Display", serif;
+  color: #111;
+
+  margin-left: 0px;
+}
+
+/* LINE 2 — BIG bridal script (dominant) */
+.line-2 {
+  font-size: 78px;
+  font-family: "Great Vibes", cursive;
+  color: #ff4fa3;
+
+  margin-left: 40px;   /* scattered effect */
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* LINE 3 — pink serif, smaller but bold presence */
+.line-3 {
+  font-size: 38px;
+  font-family: "Playfair Display", serif;
+  color: #ff4fa3;
+
+  margin-left: 90px;   /* shifted differently for “scattered” feel */
   margin-bottom: 15px;
 }
 
-.hero p {
-  color: var(--text-light);
+/* subtitle */
+.hero-subtitle {
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  color: #222;
+
+  margin-left: 20px;
   margin-bottom: 25px;
+  max-width: 500px;
 }
 
+/* button */
+.cta-btn {
+  margin-left: 20px;
+
+  padding: 10px 18px;
+  border-radius: 25px;
+
+  border: 1px solid #ff4fa3;
+  background: transparent;
+  color: #ff4fa3;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #ff4fa3;
+  color: white;
+}
 /* =========================
    SEARCH BAR
 ========================= */
