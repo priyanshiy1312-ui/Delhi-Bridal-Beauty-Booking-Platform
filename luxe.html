@@ -1,212 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Evara Luxe Bridal Studio</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <!-- Luxury font (only used here via class scope) -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="theme-luxe">
+<body class="luxe-theme">
 
 <!-- NAVBAR -->
-<nav class="luxe-navbar">
-  <div class="luxe-logo">Evara Luxe Bridal Studio</div>
+<header class="navbar">
+  <div class="logo">Evara Luxe</div>
 
-  <ul class="luxe-nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#packages">Packages</a></li>
-    <li><a href="#gallery">Gallery</a></li>
-    <li><a href="booking.html" class="luxe-book-btn">Book Now</a></li>
-  </ul>
-</nav>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="#services">Services</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <a href="booking.html" class="cta-btn">Book Luxe Look</a>
+</header>
 
 <!-- HERO -->
-<section class="luxe-hero">
-  <div class="luxe-hero-content">
-    <h1>Evara Luxe</h1>
-    <p>Bridal perfection crafted with elegance & luxury</p>
-    <a href="booking.html" class="luxe-btn">Book Your Appointment</a>
+<section class="hero">
+  <div class="hero-content">
+
+    <div class="line-1">Luxury Bridal • Hair • Beauty Studio</div>
+
+    <div class="line-2">Evara</div>
+
+    <div class="line-3">Luxe Studio</div>
+
+    <p class="hero-subtitle">
+      Premium bridal transformations, luxury hair styling, and modern beauty experiences crafted for elegance.
+    </p>
+
+    <a href="booking.html" class="cta-btn">Transform Me</a>
+
   </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="luxe-section">
-  <h2>Our Services</h2>
+<section id="services" class="categories">
+  <h2>Luxury Hair & Bridal Services</h2>
 
-  <div class="luxe-services-grid">
+  <div class="category-grid">
 
-    <!-- HAIR -->
-    <div class="service-card">
-      <h3>Hair Styling</h3>
-
-      <div class="service-item">
-        <span>Basic Hair Wash</span>
-        <span>₹300</span>
-      </div>
-
-      <div class="service-item">
-        <span>Curly Styling</span>
-        <span>₹700</span>
-      </div>
-
-      <div class="service-item">
-        <span>Hair Cut + Wash</span>
-        <span>₹500</span>
-      </div>
-
-      <div class="service-item">
-        <span>Hair Straightening</span>
-        <span>₹900</span>
-      </div>
+    <div class="category-card">
+      💇 Hair Styling
+      <p>₹1200</p>
+      <small>Elegant finishing & styling</small>
     </div>
 
-    <!-- SKIN -->
-    <div class="service-card">
-      <h3>Skin Care</h3>
-
-      <div class="service-item">
-        <span>Basic Facial</span>
-        <span>₹600</span>
-      </div>
-
-      <div class="service-item">
-        <span>Glow Facial</span>
-        <span>₹1200</span>
-      </div>
-
-      <div class="service-item">
-        <span>Detan Treatment</span>
-        <span>₹800</span>
-      </div>
-
-      <div class="service-item">
-        <span>Cleanup</span>
-        <span>₹500</span>
-      </div>
+    <div class="category-card">
+      🌊 Curly Cut
+      <p>₹1000</p>
+      <small>Layered curls & volume shaping</small>
     </div>
 
-    <!-- NAILS -->
-    <div class="service-card">
-      <h3>Nail Art</h3>
-
-      <div class="service-item">
-        <span>Basic Nail Paint</span>
-        <span>₹200</span>
-      </div>
-
-      <div class="service-item">
-        <span>Gel Extension</span>
-        <span>₹1500</span>
-      </div>
-
-      <div class="service-item">
-        <span>French Tips</span>
-        <span>₹800</span>
-      </div>
-
-      <div class="service-item">
-        <span>Nail Refill</span>
-        <span>₹600</span>
-      </div>
+    <div class="category-card">
+      💨 Blowout
+      <p>₹900</p>
+      <small>Smooth salon finish</small>
     </div>
 
-    <!-- MAKEUP (NO BRIDAL PACKAGE — CLEAN SEPARATION) -->
-    <div class="service-card">
-      <h3>Makeup</h3>
-
-      <div class="service-item">
-        <span>Party Makeup</span>
-        <span>₹2000</span>
-      </div>
-
-      <div class="service-item">
-        <span>Engagement Look</span>
-        <span>₹3500</span>
-      </div>
-
-      <div class="service-item">
-        <span>HD Makeup</span>
-        <span>₹5000</span>
-      </div>
-
-      <div class="service-item">
-        <span>Light Natural Makeup</span>
-        <span>₹1500</span>
-      </div>
+    <div class="category-card">
+      👰 Bridal Bun
+      <p>₹1500</p>
+      <small>Classic bridal hair styling</small>
     </div>
 
-  </div>
-</section>
-<!-- PACKAGES -->
-<section id="packages" class="luxe-section">
-  <h2>Luxury Packages</h2>
-
-  <div class="luxe-packages">
-
-    <div class="luxe-package-card">
-      <h3>Platinum Bridal</h3>
-      <p>3 Hours Service</p>
-      <ul>
-        <li>HD Bridal Makeup</li>
-        <li>Premium Hair Styling</li>
-        <li>Skin Prep Treatment</li>
-        <li>Touch-up Kit</li>
-      </ul>
-      <h4>₹12,999</h4>
-      <a href="booking.html" class="luxe-btn">Book Now</a>
+    <div class="category-card">
+      💅 Nail Art
+      <p>₹800</p>
+      <small>Luxury nail styling</small>
     </div>
 
-    <div class="luxe-package-card">
-      <h3>Gold Glam</h3>
-      <p>2 Hours Service</p>
-      <ul>
-        <li>Party Makeup</li>
-        <li>Hair Styling</li>
-        <li>Glow Finish</li>
-      </ul>
-      <h4>₹6,999</h4>
-      <a href="booking.html" class="luxe-btn">Book Now</a>
+    <div class="category-card">
+      ✨ Hair Extensions
+      <p>₹1800</p>
+      <small>Volume & length enhancement</small>
     </div>
 
-    <div class="luxe-package-card">
-      <h3>Silver Fresh</h3>
-      <p>1.5 Hours Service</p>
-      <ul>
-        <li>Natural Makeup</li>
-        <li>Basic Styling</li>
-        <li>Skin Care</li>
-      </ul>
-      <h4>₹3,999</h4>
-      <a href="booking.html" class="luxe-btn">Book Now</a>
+    <div class="category-card">
+      💍 Bridal Makeup
+      <p>₹2500</p>
+      <small>Full luxury bridal transformation</small>
+    </div>
+
+    <div class="category-card">
+      🌸 Hair Spa
+      <p>₹1100</p>
+      <small>Deep nourishment therapy</small>
     </div>
 
   </div>
 </section>
 
-<section id="gallery" class="luxe-section">
-  <h2>Our Work</h2>
+<!-- REVIEWS -->
+<section id="reviews" class="reviews">
+  <h2>Client Transformations</h2>
 
-  <div class="ig-grid">
+  <div class="review-grid">
 
-    <img src="https://images.pexels.com/photos/34025162/pexels-photo-34025162.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bridal makeup close up">
+    <!-- BRIDE 1 -->
+    <div class="review">
+     <img src="https://images.pexels.com/photos/14847144/pexels-photo-14847144.jpeg?auto=compress&cs=tinysrgb&w=800">
+      <p>⭐ 5.0 Rating</p>
+      <p>"Absolutely flawless bridal look. Felt like a queen."</p>
+    </div>
 
-    <img src="https://images.pexels.com/photos/34037603/pexels-photo-34037603.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bridal makeup process">
+    <!-- BRIDE 2 -->
+    <div class="review">
+      <img src="https://images.pexels.com/photos/37710473/pexels-photo-37710473.jpeg?auto=compress&cs=tinysrgb&w=800">
+      <p>⭐ 4.9 Rating</p>
+      <p>"My wedding makeup was elegant and perfectly done."</p>
+    </div>
 
-    <img src="https://images.pexels.com/photos/34025152/pexels-photo-34025152.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Eye makeup bridal">
+    <!-- HAIRCUT -->
+    <div class="review">
+      <img src="https://images.pexels.com/photos/20046792/pexels-photo-20046792.jpeg?auto=compress&cs=tinysrgb&w=800">
+      <p>⭐ 4.8 Rating</p>
+      <p>"Best curly haircut I’ve ever had. Loved the volume!"</p>
+    </div>
 
-    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80" alt="Finished bridal look">
+    <!-- HAIR EXTENSION -->
+    <div class="review">
+   <img src="https://images.pexels.com/photos/18367697/pexels-photo-18367697.jpeg?auto=compress&cs=tinysrgb&w=800">
+      <p>⭐ 5.0 Rating</p>
+      <p>"Hair extensions looked so natural and luxurious."</p>
+    </div>
 
   </div>
 </section>
+
+<!-- ABOUT -->
+<section id="about" class="about-us">
+  <h2>About Evara Luxe Studio</h2>
+
+  <p>
+    Evara Luxe is a premium bridal and hair studio offering luxury transformations,
+    modern styling, and elegant beauty experiences for every occasion.
+  </p>
+</section>
+
 <!-- FOOTER -->
-<footer class="luxe-footer">
-  <p>© 2026 Evara Luxe Bridal Studio | Timeless Beauty Redefined</p>
+<footer class="footer">
+  <p>© 2026 Evara Luxe Bridal Studio ✨ Luxury Redefined</p>
 </footer>
 
 </body>

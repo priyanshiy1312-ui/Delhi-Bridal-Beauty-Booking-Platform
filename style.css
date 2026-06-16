@@ -926,322 +926,7 @@ body {
     padding: 10px;
   }
 }
-/** luxe**/
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
 
-/* =========================
-   BASE THEME
-========================= */
-
-.theme-luxe {
-  background: #0b0b0f;
-  color: #f5f5f5;
-  font-family: Arial, sans-serif;
-  overflow-x: hidden;
-}
-
-/* ================= NAVBAR ================= */
-
-.theme-luxe .luxe-navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: rgba(0,0,0,0.85);
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid rgba(255, 215, 0, 0.15);
-}
-
-.theme-luxe .luxe-logo {
-  color: gold;
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
-  font-size: 22px;
-}
-
-.theme-luxe .luxe-nav-links {
-  list-style: none;
-  display: flex;
-  gap: 22px;
-}
-
-.theme-luxe .luxe-nav-links a {
-  color: #ddd;
-  text-decoration: none;
-  font-size: 14px;
-  transition: 0.3s;
-}
-
-.theme-luxe .luxe-nav-links a:hover {
-  color: gold;
-}
-
-/* ================= HERO ================= */
-
-.theme-luxe .luxe-hero {
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-              url("images/luxe-hero.jpg") center/cover;
-}
-
-.theme-luxe .luxe-hero h1 {
-  font-size: 64px;
-  font-family: "Playfair Display", serif;
-  color: gold;
-  margin-bottom: 10px;
-}
-
-.theme-luxe .luxe-hero p {
-  color: #ccc;
-  font-size: 16px;
-}
-
-/* ================= BUTTON ================= */
-
-.theme-luxe .luxe-btn {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 12px 26px;
-  background: gold;
-  color: black;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.theme-luxe .luxe-btn:hover {
-  background: #e6c200;
-  transform: translateY(-2px);
-}
-
-/* ================= SECTION BASE ================= */
-
-.theme-luxe .luxe-section {
-  padding: 70px 20px;
-  text-align: center;
-  background: radial-gradient(circle at top, #15151c, #0b0b0f);
-}
-
-.theme-luxe .luxe-section h2 {
-  font-size: 34px;
-  margin-bottom: 35px;
-  color: gold;
-  font-family: "Playfair Display", serif;
-  letter-spacing: 1px;
-}
-
-.theme-luxe .luxe-section h2::after {
-  content: "";
-  width: 80px;
-  height: 2px;
-  background: gold;
-  display: block;
-  margin: 10px auto 0;
-  box-shadow: 0 0 10px gold;
-}
-
-/* ================= SERVICES ================= */
-
-.luxe-services-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.service-card {
-  background: #111;
-  border: 1px solid rgba(255, 215, 0, 0.2);
-  padding: 22px;
-  border-radius: 12px;
-  text-align: left;
-  transition: 0.3s;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.1);
-}
-
-.service-card h3 {
-  color: gold;
-  font-family: "Playfair Display", serif;
-  margin-bottom: 12px;
-}
-
-.service-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 0;
-  border-bottom: 1px solid #222;
-  font-size: 14px;
-}
-
-.service-item span:last-child {
-  color: gold;
-}
-
-/* ================= PACKAGES (FIXED PROPER SPACING) ================= */
-
-.theme-luxe .luxe-packages {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.theme-luxe .luxe-package-card {
-  background: #111;
-  border: 1px solid rgba(255, 215, 0, 0.2);
-  padding: 22px;
-  border-radius: 12px;
-  transition: 0.3s;
-  text-align: left;
-}
-
-.theme-luxe .luxe-package-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.12);
-}
-
-.theme-luxe .luxe-package-card h3 {
-  color: gold;
-  font-family: "Playfair Display", serif;
-  margin-bottom: 12px;
-}
-
-/* 🔥 FIXED LIST SPACING */
-.theme-luxe .luxe-package-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.theme-luxe .luxe-package-card ul li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  font-size: 14px;
-  padding: 6px 0;
-
-  border-bottom: 1px solid #1f1f1f;
-}
-
-.theme-luxe .luxe-package-card ul li span:last-child {
-  color: gold;
-  white-space: nowrap;
-}
-
-/* ================= INSTAGRAM LUXE GRID ================= */
-
-.ig-grid {
-  column-count: 2;
-  column-gap: 18px;
-  max-width: 900px;
-  margin: auto;
-  padding: 10px;
-}
-
-.ig-grid img {
-  width: 100%;
-  margin-bottom: 18px;
-  border-radius: 18px;
-  display: block;
-  break-inside: avoid;
-
-  border: 1px solid rgba(255, 215, 0, 0.2);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-
-  transition: all 0.35s ease;
-}
-
-.ig-grid img:hover {
-  transform: scale(1.04);
-  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.15);
-  filter: brightness(1.1);
-  cursor: pointer;
-}
-
-/* ================= FOOTER ================= */
-
-.theme-luxe .luxe-footer {
-  text-align: center;
-  padding: 25px;
-  color: #777;
-  border-top: 1px solid rgba(255, 215, 0, 0.1);
-}
-
-/* ================= RESPONSIVE DESIGN ================= */
-
-@media (max-width: 1024px) {
-  .theme-luxe .luxe-hero h1 {
-    font-size: 48px;
-  }
-
-  .theme-luxe .luxe-packages {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .theme-luxe .luxe-navbar {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .theme-luxe .luxe-nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .theme-luxe .luxe-hero h1 {
-    font-size: 38px;
-  }
-
-  .luxe-services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .theme-luxe .luxe-packages {
-    grid-template-columns: 1fr;
-  }
-
-  .ig-grid {
-    column-count: 1;
-  }
-}
-
-@media (max-width: 480px) {
-  .theme-luxe .luxe-hero h1 {
-    font-size: 30px;
-  }
-
-  .theme-luxe .luxe-btn {
-    padding: 10px 18px;
-    font-size: 13px;
-  }
-
-  .theme-luxe .luxe-section h2 {
-    font-size: 26px;
-  }
-}
 
 /**blush**/
 .blush-theme {
@@ -1487,5 +1172,790 @@ body {
 
   .blush-theme .line-2 {
     font-size: 60px;
+  }
+}
+
+
+/* =========================
+   URBAN GLOW THEME (SCOPED)
+========================= */
+
+.urban-theme {
+  font-family: "Poppins", sans-serif;
+  background: #0f0f14;
+  color: #ffffff;
+}
+
+/* ================= NAVBAR ================= */
+
+.urban-theme .navbar {
+  display: flex;
+  align-items: center;
+  padding: 16px 50px;
+
+  background: rgba(20, 20, 30, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.urban-theme .logo {
+  font-size: 26px;
+  font-weight: 600;
+  color: #ff4fd8;
+}
+
+.urban-theme .nav-links {
+  display: flex;
+  gap: 20px;
+  margin-left: auto;
+}
+
+.urban-theme .nav-links a {
+  text-decoration: none;
+  color: #ddd;
+}
+
+.urban-theme .nav-links a:hover {
+  color: #ff4fd8;
+}
+
+/* ================= CTA ================= */
+
+.urban-theme .cta-btn {
+  display: inline-block;
+  margin-top: 25px;   /* 👈 creates proper gap from text */
+  padding: 12px 22px;
+
+  background: linear-gradient(135deg, #ff4fd8, #6a5cff);
+  color: white;
+
+  border-radius: 30px;
+  text-decoration: none;
+
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+/* ================= HERO (NO IMAGE) ================= */
+
+.urban-theme .hero {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  padding-left: 8%;
+
+  background: radial-gradient(circle at 20% 30%, rgba(255,79,216,0.12), transparent 50%),
+              radial-gradient(circle at 80% 60%, rgba(106,92,255,0.12), transparent 50%),
+              #0f0f14;
+}
+
+.urban-theme .hero-content {
+  max-width: 650px;
+}
+
+.urban-theme .hero h1 {
+  font-size: 52px;
+  color: #ff4fd8;
+}
+
+/* ================= SERVICES ================= */
+
+.urban-theme .services {
+  padding: 70px 20px;
+  text-align: center;
+  background: #12121a;
+}
+
+.urban-theme .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.urban-theme .card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,79,216,0.2);
+  text-align: left;
+}
+
+.urban-theme .card p {
+  margin: 6px 0;
+  color: #ff4fd8;
+  font-weight: 600;
+}
+
+.urban-theme .card small {
+  color: #aaa;
+}
+
+/* ================= REVIEWS ================= */
+
+.urban-theme .reviews {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.urban-theme .review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.urban-theme .review {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.urban-theme .review:hover {
+  transform: translateY(-5px);
+}
+
+.urban-theme .review img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ================= ABOUT ================= */
+
+.urban-theme .about {
+  padding: 60px 20px;
+  text-align: center;
+  color: #ddd;
+}
+
+/* ================= FOOTER ================= */
+
+.urban-theme .footer {
+  text-align: center;
+  padding: 20px;
+  background: #0b0b10;
+  color: #888;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .urban-theme .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .urban-theme .review-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .urban-theme .navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .urban-theme .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   MEENAKSHI THEME (TRADITIONAL INDIA)
+========================= */
+
+.meenakshi-theme {
+  font-family: "Poppins", sans-serif;
+  color: #2b1a16;
+
+  background:
+    radial-gradient(circle at 20% 10%, rgba(139,0,0,0.12), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(255,140,0,0.10), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(255,215,0,0.08), transparent 50%),
+    #fff7f2;
+}
+
+/* ================= NAVBAR ================= */
+
+.meenakshi-theme .navbar {
+  display: flex;
+  align-items: center;
+  padding: 16px 50px;
+
+  background: rgba(255,250,245,0.8);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(139,0,0,0.2);
+}
+
+.meenakshi-theme .logo {
+  font-family: "Great Vibes", cursive;
+  font-size: 40px;
+  color: #8b0000;
+}
+
+/* ================= CTA ================= */
+
+.meenakshi-theme .cta-btn {
+  background: linear-gradient(135deg, #8b0000, #ff9800);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+/* ================= HERO (NO IMAGE) ================= */
+
+.meenakshi-theme .hero {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  padding-left: 8%;
+
+  background: radial-gradient(circle at 30% 30%, rgba(139,0,0,0.08), transparent 50%),
+              radial-gradient(circle at 70% 60%, rgba(255,152,0,0.08), transparent 50%),
+              #fff7f2;
+}
+
+.meenakshi-theme .hero-content {
+  max-width: 650px;
+}
+
+.meenakshi-theme .line-2 {
+  font-size: 85px;
+  font-family: "Great Vibes", cursive;
+  color: #8b0000;
+}
+
+.meenakshi-theme .line-3 {
+  font-size: 40px;
+  font-family: "Playfair Display", serif;
+  color: #ff9800;
+}
+
+/* ================= SERVICES ================= */
+
+.meenakshi-theme .categories {
+  padding: 70px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.meenakshi-theme .category-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.meenakshi-theme .category-card {
+  background: rgba(255,245,235,0.9);
+  border: 1px solid rgba(139,0,0,0.2);
+  padding: 18px;
+  border-radius: 14px;
+  transition: 0.3s;
+  text-align: left;
+}
+
+.meenakshi-theme .category-card p {
+  color: #8b0000;
+  font-weight: 600;
+}
+
+/* ================= REVIEWS ================= */
+
+.meenakshi-theme .reviews {
+  padding: 70px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #fff, #fff1e6);
+}
+
+.meenakshi-theme .review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.meenakshi-theme .review {
+  background: white;
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 10px 25px rgba(139,0,0,0.12);
+  transition: 0.3s;
+}
+
+.meenakshi-theme .review img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ================= ABOUT ================= */
+
+.meenakshi-theme .about-us {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+/* ================= FOOTER ================= */
+
+.meenakshi-theme .footer {
+  text-align: center;
+  padding: 20px;
+  background: #fff3e6;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .meenakshi-theme .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .meenakshi-theme .review-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .meenakshi-theme .navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .meenakshi-theme .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .meenakshi-theme .line-2 {
+    font-size: 60px;
+  }
+}
+
+/* =========================
+   ELLE THEME (MODERN WEDDING + LUXURY GLAM)
+========================= */
+
+.elle-theme {
+  font-family: "Poppins", sans-serif;
+  color: #1e1e1e;
+
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255,182,193,0.12), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(173,216,230,0.10), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(255,192,203,0.08), transparent 50%),
+    #fff;
+}
+
+/* ================= NAVBAR ================= */
+
+.elle-theme .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 50px;
+
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(214,51,132,0.15);
+}
+
+.elle-theme .logo {
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  color: #d63384;
+}
+
+/* ================= NAV LINKS ================= */
+
+.elle-theme .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.elle-theme .nav-links a {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+}
+
+.elle-theme .nav-links a:hover {
+  color: #d63384;
+}
+
+/* ================= CTA ================= */
+
+.elle-theme .cta-btn {
+  background: linear-gradient(135deg, #ff4fd8, #6a5cff);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.elle-theme .cta-btn:hover {
+  transform: translateY(4px);
+}
+
+/* ================= HERO ================= */
+
+.elle-theme .hero {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  padding-left: 8%;
+
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,182,193,0.15), transparent 50%),
+    radial-gradient(circle at 70% 60%, rgba(173,216,230,0.12), transparent 50%),
+    #fff;
+}
+
+.elle-theme .hero-content {
+  max-width: 650px;
+}
+
+.elle-theme .line-1 {
+  font-size: 18px;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+.elle-theme .line-2 {
+  font-size: 85px;
+  font-family: "Playfair Display", serif;
+  color: #d63384;
+}
+
+.elle-theme .line-3 {
+  font-size: 40px;
+  color: #6c757d;
+}
+
+.elle-theme .hero-subtitle {
+  margin-top: 10px;
+  max-width: 500px;
+  color: #444;
+}
+
+/* ================= SERVICES ================= */
+
+.elle-theme .categories {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.elle-theme .category-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.elle-theme .category-card {
+  background: white;
+  border: 1px solid rgba(214,51,132,0.15);
+  padding: 18px;
+  border-radius: 14px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.elle-theme .category-card:hover {
+  transform: translateY(-5px);
+}
+
+.elle-theme .category-card p {
+  color: #d63384;
+  font-weight: 600;
+}
+
+/* ================= REVIEWS ================= */
+
+.elle-theme .reviews {
+  padding: 70px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #fff, #fff5f9);
+}
+
+.elle-theme .review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.elle-theme .review {
+  background: white;
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.elle-theme .review img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ================= ABOUT ================= */
+
+.elle-theme .about-us {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+/* ================= FOOTER ================= */
+
+.elle-theme .footer {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .elle-theme .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .elle-theme .review-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .elle-theme .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .elle-theme .navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .elle-theme .line-2 {
+    font-size: 55px;
+  }
+}
+
+
+/* =========================
+   LUXE THEME (ROYAL GOLD + CLEAN LUXURY)
+========================= */
+
+.luxe-theme {
+  font-family: "Poppins", sans-serif;
+  color: #1a1a1a;
+
+  background:
+    radial-gradient(circle at 20% 10%, rgba(212,175,55,0.12), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(255,215,0,0.08), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(255,182,193,0.06), transparent 50%),
+    #fff;
+}
+
+/* ================= NAVBAR ================= */
+
+.luxe-theme .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 50px;
+
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(212,175,55,0.2);
+}
+
+.luxe-theme .logo {
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  color: #b8860b;
+}
+
+/* ================= NAV LINKS ================= */
+
+.luxe-theme .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.luxe-theme .nav-links a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.luxe-theme .nav-links a:hover {
+  color: #b8860b;
+}
+
+/* ================= CTA BUTTON ================= */
+
+.luxe-theme .cta-btn {
+  background: linear-gradient(135deg, #d4af37, #b8860b);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.luxe-theme .cta-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* ================= HERO ================= */
+
+.luxe-theme .hero {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  padding-left: 8%;
+
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,215,0,0.12), transparent 50%),
+    radial-gradient(circle at 70% 60%, rgba(212,175,55,0.10), transparent 50%),
+    #fff;
+}
+
+.luxe-theme .hero-content {
+  max-width: 650px;
+}
+
+.luxe-theme .line-2 {
+  font-size: 85px;
+  font-family: "Playfair Display", serif;
+  color: #b8860b;
+}
+
+.luxe-theme .line-3 {
+  font-size: 40px;
+  color: #6c5b2d;
+}
+
+/* ================= SERVICES ================= */
+
+.luxe-theme .categories {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.luxe-theme .category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.luxe-theme .category-card {
+  background: white;
+  border: 1px solid rgba(212,175,55,0.25);
+  padding: 18px;
+  border-radius: 14px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+.luxe-theme .category-card:hover {
+  transform: translateY(-5px);
+}
+
+.luxe-theme .category-card p {
+  color: #b8860b;
+  font-weight: 600;
+}
+
+/* ================= REVIEWS ================= */
+
+.luxe-theme .reviews {
+  padding: 70px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #fff, #fff8e7);
+}
+
+.luxe-theme .review-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.luxe-theme .review {
+  background: white;
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.luxe-theme .review img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ================= ABOUT ================= */
+
+.luxe-theme .about-us {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+/* ================= FOOTER ================= */
+
+.luxe-theme .footer {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .luxe-theme .review-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .luxe-theme .line-2 {
+    font-size: 55px;
+  }
+}
+
+@media (max-width: 768px) {
+  .luxe-theme .navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .luxe-theme .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
