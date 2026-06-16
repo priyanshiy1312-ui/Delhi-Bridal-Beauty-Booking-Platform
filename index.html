@@ -143,8 +143,7 @@
 
   </div>
 </div>
-
-  <!-- FEATURED SALONS -->
+<!-- FEATURED SALONS -->
 <section id="salons" class="salons">
   <h2>Featured Salons in Delhi</h2>
 
@@ -155,8 +154,9 @@
         <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800" />
       </div>
       <h3>Evara Luxe Bridal Studio</h3>
+
       <div class="card-buttons">
-        <a href="#">View Salon</a>
+        <a href="luxe.html">View Salon</a>
         <button onclick="openPopup('luxe')">Quick View</button>
       </div>
     </div>
@@ -166,8 +166,9 @@
         <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=800" />
       </div>
       <h3>Blush & Bloom Studio</h3>
+
       <div class="card-buttons">
-        <a href="#">View Salon</a>
+        <a href="blush.html">View Salon</a>
         <button onclick="openPopup('blush')">Quick View</button>
       </div>
     </div>
@@ -177,8 +178,9 @@
         <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=800" />
       </div>
       <h3>Urban Glow Studio</h3>
+
       <div class="card-buttons">
-        <a href="#">View Salon</a>
+        <a href="glow.html">View Salon</a>
         <button onclick="openPopup('glow')">Quick View</button>
       </div>
     </div>
@@ -188,8 +190,9 @@
         <img src="https://images.unsplash.com/photo-1526045478516-99145907023c?w=800" />
       </div>
       <h3>Meenakshi Bridal Studio</h3>
+
       <div class="card-buttons">
-        <a href="#">View Salon</a>
+        <a href="meenakshi.html">View Salon</a>
         <button onclick="openPopup('meenakshi')">Quick View</button>
       </div>
     </div>
@@ -199,14 +202,30 @@
         <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800" />
       </div>
       <h3>Elle Beauty Lounge</h3>
+
       <div class="card-buttons">
-        <a href="#">View Salon</a>
+        <a href="elle.html">View Salon</a>
         <button onclick="openPopup('elle')">Quick View</button>
       </div>
     </div>
 
   </div>
 </section>
+
+<!-- POPUP -->
+<div id="salonPopup" class="popup-overlay">
+  <div class="popup-card">
+
+    <h2 id="popupName"></h2>
+    <p id="popupAddress"></p>
+    <p id="popupReviews"></p>
+    <p id="popupServices"></p>
+    <p id="popupDesc"></p>
+
+    <button onclick="closePopup()">Close</button>
+
+  </div>
+</div>
   <!-- REVIEWS -->
 <section id="reviews" class="reviews">
   <h2>Reviews</h2>
@@ -240,19 +259,9 @@
   <footer class="footer">
     <p>© 2026 BridalGlow. All rights reserved.</p>
   </footer>
-<!-- POPUP HTML goes HERE -->
-<div id="salonPopup" class="popup-overlay">
-  <div class="popup-card">
-    <h2 id="popupName"></h2>
-    <p id="popupAddress"></p>
-    <p id="popupReviews"></p>
-    <p id="popupServices"></p>
-    <p id="popupDesc"></p>
-
     <button onclick="closePopup()">Close</button>
   </div>
 </div>
   <script src="app.js"></script>
 
 </body>
-</html>
