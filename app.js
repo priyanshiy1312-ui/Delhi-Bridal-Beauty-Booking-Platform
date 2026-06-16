@@ -254,3 +254,41 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const form = document.getElementById("bookingForm");
+  const popup = document.getElementById("confirmPopup");
+  const confirmText = document.getElementById("confirmText");
+  const closeBtn = document.getElementById("closeConfirm");
+
+  if (!form) return;
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const date = document.getElementById("date").value;
+    const service = document.getElementById("service").value;
+    const salon = document.getElementById("salon").value;
+    const time = document.getElementById("timeSlot").value;
+
+    confirmText.innerHTML = `
+      👤 <b>Name:</b> ${name}<br>
+      📞 <b>Phone:</b> ${phone}<br>
+      📅 <b>Date:</b> ${date}<br>
+      ⏰ <b>Time:</b> ${time}<br>
+      💄 <b>Service:</b> ${service}<br>
+      🏢 <b>Salon:</b> ${salon}
+    `;
+
+    popup.classList.remove("hidden");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popup.classList.add("hidden");
+    form.reset();
+  });
+
+});

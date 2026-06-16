@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment | BridalGlow</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- BOOKING SECTION -->
+  <section class="booking-section">
+
+    <h1>💍 Book Your Bridal Appointment</h1>
+
+    <form class="booking-form" id="bookingForm">
+
+      <input type="text" id="name" placeholder="Your Name" required>
+
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+
+      <input type="date" id="date" required>
+
+      <!-- SERVICE -->
+      <select id="service" required>
+        <option value="">Select Service</option>
+        <option value="Bridal Makeup">Bridal Makeup</option>
+        <option value="Hair Styling">Hair Styling</option>
+        <option value="Full Bridal Package">Full Bridal Package</option>
+        <option value="Pre-Bridal Care">Pre-Bridal Care</option>
+      </select>
+
+      <!-- SALON -->
+      <select id="salon" required>
+        <option value="">Select Salon</option>
+        <option value="Evara Luxe Bridal Studio">Evara Luxe Bridal Studio</option>
+        <option value="Blush & Bloom Studio">Blush & Bloom Studio</option>
+        <option value="Urban Glow Studio">Urban Glow Studio</option>
+        <option value="Meenakshi Bridal Studio">Meenakshi Bridal Studio</option>
+        <option value="Elle Beauty Lounge">Elle Beauty Lounge</option>
+      </select>
+
+      <!-- TIME SLOT -->
+      <select id="timeSlot" required>
+        <option value="">Select Time Slot</option>
+        <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+        <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+        <option value="12:00 PM - 01:00 PM">12:00 PM - 01:00 PM</option>
+        <option value="02:00 PM - 03:00 PM">02:00 PM - 03:00 PM</option>
+        <option value="03:00 PM - 04:00 PM">03:00 PM - 04:00 PM</option>
+        <option value="05:00 PM - 06:00 PM">05:00 PM - 06:00 PM</option>
+      </select>
+
+      <textarea id="notes" placeholder="Any special requests..."></textarea>
+
+      <button type="submit">Confirm Booking</button>
+
+    </form>
+
+  </section>
+
+  <!-- CONFIRMATION POPUP -->
+  <div id="confirmPopup" class="confirm-popup hidden">
+    <div class="confirm-box">
+
+      <h2>🎉 Booking Confirmed!</h2>
+
+      <p id="confirmText"></p>
+
+      <button id="closeConfirm">OK</button>
+
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="app.js"></script>
+
+</body>
+</html>
