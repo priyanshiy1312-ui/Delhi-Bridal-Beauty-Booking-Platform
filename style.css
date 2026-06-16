@@ -868,3 +868,624 @@ body {
 .cta-btn {
   text-decoration: none;
 }
+/* =========================
+   NAVBAR RESPONSIVE FIX
+========================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-wrap: wrap;
+    padding: 14px 20px;
+  }
+
+  .logo {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 10px 0;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .cta-btn {
+    width: 90%;
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+/** luxe**/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+/* =========================
+   BASE THEME
+========================= */
+
+.theme-luxe {
+  background: #0b0b0f;
+  color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+.theme-luxe .luxe-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+.theme-luxe .luxe-logo {
+  color: gold;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.theme-luxe .luxe-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+}
+
+.theme-luxe .luxe-nav-links a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.theme-luxe .luxe-nav-links a:hover {
+  color: gold;
+}
+
+/* ================= HERO ================= */
+
+.theme-luxe .luxe-hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+              url("images/luxe-hero.jpg") center/cover;
+}
+
+.theme-luxe .luxe-hero h1 {
+  font-size: 64px;
+  font-family: "Playfair Display", serif;
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.theme-luxe .luxe-hero p {
+  color: #ccc;
+  font-size: 16px;
+}
+
+/* ================= BUTTON ================= */
+
+.theme-luxe .luxe-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 26px;
+  background: gold;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.theme-luxe .luxe-btn:hover {
+  background: #e6c200;
+  transform: translateY(-2px);
+}
+
+/* ================= SECTION BASE ================= */
+
+.theme-luxe .luxe-section {
+  padding: 70px 20px;
+  text-align: center;
+  background: radial-gradient(circle at top, #15151c, #0b0b0f);
+}
+
+.theme-luxe .luxe-section h2 {
+  font-size: 34px;
+  margin-bottom: 35px;
+  color: gold;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1px;
+}
+
+.theme-luxe .luxe-section h2::after {
+  content: "";
+  width: 80px;
+  height: 2px;
+  background: gold;
+  display: block;
+  margin: 10px auto 0;
+  box-shadow: 0 0 10px gold;
+}
+
+/* ================= SERVICES ================= */
+
+.luxe-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.service-card {
+  background: #111;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  padding: 22px;
+  border-radius: 12px;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.1);
+}
+
+.service-card h3 {
+  color: gold;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 12px;
+}
+
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #222;
+  font-size: 14px;
+}
+
+.service-item span:last-child {
+  color: gold;
+}
+
+/* ================= PACKAGES (FIXED PROPER SPACING) ================= */
+
+.theme-luxe .luxe-packages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.theme-luxe .luxe-package-card {
+  background: #111;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  padding: 22px;
+  border-radius: 12px;
+  transition: 0.3s;
+  text-align: left;
+}
+
+.theme-luxe .luxe-package-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.12);
+}
+
+.theme-luxe .luxe-package-card h3 {
+  color: gold;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 12px;
+}
+
+/* 🔥 FIXED LIST SPACING */
+.theme-luxe .luxe-package-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.theme-luxe .luxe-package-card ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 14px;
+  padding: 6px 0;
+
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.theme-luxe .luxe-package-card ul li span:last-child {
+  color: gold;
+  white-space: nowrap;
+}
+
+/* ================= INSTAGRAM LUXE GRID ================= */
+
+.ig-grid {
+  column-count: 2;
+  column-gap: 18px;
+  max-width: 900px;
+  margin: auto;
+  padding: 10px;
+}
+
+.ig-grid img {
+  width: 100%;
+  margin-bottom: 18px;
+  border-radius: 18px;
+  display: block;
+  break-inside: avoid;
+
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+
+  transition: all 0.35s ease;
+}
+
+.ig-grid img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.15);
+  filter: brightness(1.1);
+  cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+
+.theme-luxe .luxe-footer {
+  text-align: center;
+  padding: 25px;
+  color: #777;
+  border-top: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media (max-width: 1024px) {
+  .theme-luxe .luxe-hero h1 {
+    font-size: 48px;
+  }
+
+  .theme-luxe .luxe-packages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .theme-luxe .luxe-navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .theme-luxe .luxe-nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .theme-luxe .luxe-hero h1 {
+    font-size: 38px;
+  }
+
+  .luxe-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-luxe .luxe-packages {
+    grid-template-columns: 1fr;
+  }
+
+  .ig-grid {
+    column-count: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-luxe .luxe-hero h1 {
+    font-size: 30px;
+  }
+
+  .theme-luxe .luxe-btn {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+
+  .theme-luxe .luxe-section h2 {
+    font-size: 26px;
+  }
+}
+
+/**blush**/
+.blush-theme {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #2a1a1f;
+
+  background:
+    radial-gradient(circle at 20% 10%, rgba(139,0,0,0.10), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(200,0,40,0.08), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(255,100,120,0.06), transparent 50%),
+    #fff1f1;
+}
+
+/* ================= NAVBAR ================= */
+
+.blush-theme .navbar {
+  display: flex;
+  align-items: center;
+  padding: 16px 50px;
+
+  background: rgba(255,245,247,0.75);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(139,0,0,0.15);
+}
+
+.blush-theme .logo {
+  font-family: "Great Vibes", cursive;
+  font-size: 40px;
+  color: #8b0000;
+}
+
+.blush-theme .nav-links {
+  display: flex;
+  gap: 25px;
+  margin-left: auto;
+}
+
+.blush-theme .nav-links a {
+  text-decoration: none;
+  color: #3a1f25;
+  position: relative;
+}
+
+.blush-theme .nav-links a:hover {
+  color: #8b0000;
+}
+
+/* ================= CTA ================= */
+
+.blush-theme .cta-btn {
+  background: linear-gradient(135deg, #8b0000, #c2185b);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.blush-theme .cta-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ================= HERO ================= */
+
+.blush-theme .hero {
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  padding-left: 8%;
+  position: relative;
+
+  background: url("https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+}
+
+.blush-theme .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(90deg,
+      rgba(60,0,10,0.92),
+      rgba(120,0,20,0.75),
+      rgba(255,255,255,0.05)
+    ),
+    radial-gradient(circle at 20% 30%, rgba(139,0,0,0.35), transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(200,0,40,0.25), transparent 50%);
+}
+
+.blush-theme .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+/* ================= TEXT ================= */
+
+.blush-theme .line-1 {
+  font-size: 24px;
+  color: #fff;
+}
+
+.blush-theme .line-2 {
+  font-size: 90px;
+  font-family: "Great Vibes", cursive;
+  color: #ff4d6d;
+  margin-left: 30px;
+}
+
+.blush-theme .line-3 {
+  font-size: 44px;
+  font-family: "Playfair Display", serif;
+  color: #ffd1dc;
+  margin-left: 80px;
+}
+
+.blush-theme .hero-subtitle {
+  margin-left: 20px;
+  color: #fff;
+  max-width: 500px;
+}
+
+.blush-theme .category-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.blush-theme .category-card p {
+  margin: 5px 0;
+  font-weight: 600;
+  color: #8b0000;
+  font-size: 14px;
+}
+
+.blush-theme .category-card small {
+  color: #5a3a3a;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* hover polish */
+.blush-theme .category-card:hover p,
+.blush-theme .category-card:hover small {
+  color: white;
+}
+
+/* ================= REVIEWS ================= */
+
+.blush-theme .reviews {
+  padding: 70px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #fff, #ffe6ea);
+}
+
+.blush-theme .review-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.blush-theme .review {
+  background: white;
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 10px 25px rgba(139,0,0,0.12);
+  transition: 0.3s;
+}
+
+.blush-theme .review:nth-child(odd) {
+  transform: rotate(-0.5deg);
+}
+
+.blush-theme .review:nth-child(even) {
+  transform: rotate(0.5deg);
+}
+
+.blush-theme .review:hover {
+  transform: scale(1.03);
+}
+
+.blush-theme .review img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ================= ABOUT ================= */
+
+.blush-theme .about-us {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.blush-theme .about-us p {
+  max-width: 700px;
+  margin: auto;
+  color: #4a2a33;
+}
+
+/* ================= FOOTER ================= */
+
+.blush-theme .footer {
+  text-align: center;
+  padding: 20px;
+  background: #fff0f3;
+  color: #6a3a45;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .blush-theme .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .blush-theme .review-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .blush-theme .navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .blush-theme .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .blush-theme .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blush-theme .line-2 {
+    font-size: 60px;
+  }
+}
