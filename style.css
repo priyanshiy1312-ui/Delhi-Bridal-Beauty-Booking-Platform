@@ -320,9 +320,102 @@ body {
   outline: none;
   box-shadow: var(--card-shadow);
 }
+.search-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* FLIP CARD */
+.search-modal-content {
+  background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+  padding: 35px 30px;
+  border-radius: 28px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  position: relative;
+
+  /* flip start */
+  transform: perspective(1200px) rotateX(-90deg);
+  opacity: 0;
+
+  transition: transform 0.55s ease, opacity 0.55s ease;
+
+  box-shadow: 0 18px 45px rgba(255, 105, 180, 0.25);
+  border: 1px solid rgba(255, 182, 193, 0.4);
+
+  font-family: "Segoe Script", "cursive";
+}
+
+/* ACTIVE STATE (FLIP IN) */
+.search-modal.show .search-modal-content {
+  transform: perspective(1200px) rotateX(0deg);
+  opacity: 1;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #d63384;
+}
+
+/* TITLE */
+.search-modal-content h2 {
+  color: #d63384;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* SUBTITLE */
+.subtitle {
+  color: #6b3b4a;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+/* HINT TEXT */
+.hint {
+  margin-bottom: 10px;
+  color: #8a4b5c;
+  font-size: 14px;
+}
+
+/* LIST */
+.suggestions {
+  margin-top: 10px;
+}
+
+.suggestions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestions li {
+  padding: 10px 0;
+  font-size: 15px;
+  color: #6a3c4b;
+  letter-spacing: 0.3px;
+}
+
+/* hover polish */
+.search-modal-content:hover {
+  box-shadow: 0 22px 60px rgba(255, 105, 180, 0.35);
+}
 
 /* =========================
-   CATEGORIES
+   CATEGORY SECTION
 ========================= */
 .categories {
   padding: 60px;
@@ -337,18 +430,89 @@ body {
   margin-top: 25px;
 }
 
+/* CARD STYLE */
 .category-card {
   background: white;
-  padding: 20px;
+  padding: 22px;
   border-radius: 16px;
   box-shadow: var(--card-shadow);
-  transition: 0.3s;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 500;
 }
 
 .category-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   background: var(--light-pink);
   color: var(--pink);
+}
+
+/* =========================
+   CATEGORY MODAL (FLIP STYLE)
+========================= */
+.category-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* FLIP CARD */
+.category-modal-content {
+  width: 90%;
+  max-width: 450px;
+  padding: 35px;
+  border-radius: 28px;
+  text-align: center;
+
+  color: white;
+
+  transform: perspective(1200px) rotateX(-90deg);
+  opacity: 0;
+  transition: 0.5s ease;
+
+  background-size: cover;
+  background-position: center;
+
+  box-shadow: 0 18px 50px rgba(0,0,0,0.3);
+}
+
+/* SHOW STATE */
+.category-modal.show .category-modal-content {
+  transform: perspective(1200px) rotateX(0deg);
+  opacity: 1;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+}
+
+/* TEXT */
+.category-modal-content h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.category-modal-content p {
+  font-size: 15px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.cat-stats {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 15px 0;
 }
 
 /* =========================
@@ -408,32 +572,41 @@ body {
   border-radius: 20px;
 }
 
-/* =========================
-   AI SECTION
-========================= */
-.ai-section {
+.reviews {
+  padding: 60px;
   text-align: center;
-  padding: 70px;
-  background: var(--light-pink);
 }
 
-/* =========================
-   TESTIMONIALS
-========================= */
-.testimonial-grid {
+.review-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  padding: 60px;
+  margin-top: 25px;
 }
 
-.testimonial {
+.review {
   background: white;
   padding: 20px;
   border-radius: 14px;
   box-shadow: var(--card-shadow);
+  transition: 0.3s;
+}
+.review:hover {
+  transform: translateY(-5px);
+}
+.about-us {
+  padding: 60px;
+  text-align: center;
+  background: var(--soft-bg);
+  color: var(--text-dark);
 }
 
+.about-us p {
+  max-width: 700px;
+  margin: 10px auto;
+  line-height: 1.6;
+  color: var(--text-light);
+}
 /* =========================
    FOOTER
 ========================= */
@@ -451,7 +624,7 @@ body {
 @media (max-width: 768px) {
   .category-grid,
   .salon-grid,
-  .testimonial-grid {
+  .review-grid {
     grid-template-columns: 1fr;
   }
 
@@ -462,4 +635,35 @@ body {
   .hero h1 {
     font-size: 32px;
   }
+}
+/* ONLY these section headings */
+#categories h2,
+#salons h2,
+#reviews h2,
+#about-us h2 {
+  text-align: center;
+  color: #ff4da6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
 }

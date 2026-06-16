@@ -21,7 +21,7 @@
     <a href="#categories">Categories</a>
     <a href="#salons">Salons</a>
     <a href="#reviews">Reviews</a>
-     <a href="#about us ">About us</a>
+     <a href="#about-us ">About us</a>
   </nav>
 
  <button class="cta-btn">
@@ -64,141 +64,195 @@
 </section>
 
   <!-- SEARCH -->
-  <section class="search-section">
-    <input type="text" placeholder="Search salons, services, or location..." />
-  </section>
+<section class="search-section">
+  <input
+    type="text"
+    placeholder="Search salons, services, or location..."
+    id="searchBar"
+    readonly
+  />
+</section>
 
-  <!-- CATEGORIES -->
-  <section id="categories" class="categories">
-    <h2>Categories</h2>
+<!-- POPUP MODAL -->
+<div id="searchModal" class="search-modal">
+  <div class="search-modal-content">
 
-    <div class="category-grid">
-      <div class="category-card">👰 Bridal</div>
-      <div class="category-card">💇 Hair</div>
-      <div class="category-card">💄 Makeup</div>
-      <div class="category-card">💅 Nails</div>
-      <div class="category-card">🌿 Spa</div>
+    <span class="close-btn" id="closeModal">&times;</span>
+
+    <h2>🔍 Search Coming Soon</h2>
+
+    <p class="subtitle">
+      We’re building a smart search for salons, services, and locations.
+    </p>
+
+    <div class="suggestions">
+      <p class="hint">✨ Meanwhile explore:</p>
+      <ul>
+        <li>Bridal Makeup</li>
+        <li>Hair Styling</li>
+        <li>Nail Art</li>
+        <li>Top Rated Salons</li>
+      </ul>
     </div>
-  </section>
+
+  </div>
+</div>
+  
+  <!-- CATEGORIES -->
+<section id="categories" class="categories">
+  <h2>Categories</h2>
+
+  <div class="category-grid">
+
+    <div class="category-card" onclick="openCategory('bridal')">
+      👰 Bridal
+    </div>
+
+    <div class="category-card" onclick="openCategory('hair')">
+      💇 Hair
+    </div>
+
+    <div class="category-card" onclick="openCategory('makeup')">
+      💄 Makeup
+    </div>
+
+    <div class="category-card" onclick="openCategory('nails')">
+      💅 Nails
+    </div>
+
+    <div class="category-card" onclick="openCategory('spa')">
+      🌿 Spa
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CATEGORY MODAL -->
+<div id="categoryModal" class="category-modal">
+  <div class="category-modal-content">
+
+    <span class="close-btn" onclick="closeCategory()">&times;</span>
+
+    <h2 id="cat-title"></h2>
+    <p id="cat-desc"></p>
+
+    <div id="cat-stats" class="cat-stats"></div>
+
+    <button class="cta-btn">Explore Salons</button>
+
+  </div>
+</div>
 
   <!-- FEATURED SALONS -->
-  <section id="salons" class="salons">
-    <h2>Featured Salons in Delhi</h2>
+<section id="salons" class="salons">
+  <h2>Featured Salons in Delhi</h2>
 
-    <div class="salon-grid">
+  <div class="salon-grid">
 
-      <!-- 1 -->
-      <div class="salon-card">
-        <div class="salon-image"></div>
-        <h3>Evara Luxe Bridal Studio</h3>
-        <p>⭐ 4.9 (284 reviews)</p>
-        <p>📍 South Delhi</p>
-        <p>💰 ₹35,000 onwards</p>
-
-        <div class="card-buttons">
-          <a href="luxe.html">View Salon</a>
-          <button onclick="openPopup('luxe')">Quick View</button>
-        </div>
+    <div class="salon-card">
+      <div class="salon-image">
+        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800" />
       </div>
-
-      <!-- 2 -->
-      <div class="salon-card">
-        <div class="salon-image"></div>
-        <h3>Blush & Bloom Studio</h3>
-        <p>⭐ 4.7 (196 reviews)</p>
-        <p>📍 West Delhi</p>
-        <p>💰 ₹18,000 onwards</p>
-
-        <div class="card-buttons">
-          <a href="blush.html">View Salon</a>
-          <button onclick="openPopup('blush')">Quick View</button>
-        </div>
+      <h3>Evara Luxe Bridal Studio</h3>
+      <div class="card-buttons">
+        <a href="#">View Salon</a>
+        <button onclick="openPopup('luxe')">Quick View</button>
       </div>
-
-      <!-- 3 -->
-      <div class="salon-card">
-        <div class="salon-image"></div>
-        <h3>Urban Glow Studio</h3>
-        <p>⭐ 4.8 (310 reviews)</p>
-        <p>📍 East Delhi</p>
-        <p>💰 ₹20,000 onwards</p>
-
-        <div class="card-buttons">
-          <a href="glow.html">View Salon</a>
-          <button onclick="openPopup('glow')">Quick View</button>
-        </div>
-      </div>
-
-      <!-- 4 -->
-      <div class="salon-card">
-        <div class="salon-image"></div>
-        <h3>Meenakshi Bridal Studio</h3>
-        <p>⭐ 4.8 (240 reviews)</p>
-        <p>📍 Central Delhi</p>
-        <p>💰 ₹25,000 onwards</p>
-
-        <div class="card-buttons">
-          <a href="royal.html">View Salon</a>
-          <button onclick="openPopup('royal')">Quick View</button>
-        </div>
-      </div>
-
-      <!-- 5 -->
-      <div class="salon-card">
-        <div class="salon-image"></div>
-        <h3>Elle Beauty Lounge</h3>
-        <p>⭐ 4.9 (215 reviews)</p>
-        <p>📍 New Delhi</p>
-        <p>💰 ₹30,000 onwards</p>
-
-        <div class="card-buttons">
-          <a href="elite.html">View Salon</a>
-          <button onclick="openPopup('elite')">Quick View</button>
-        </div>
-      </div>
-
     </div>
-  </section>
 
-  <!-- AI SECTION -->
-  <section class="ai-section">
-    <h2>✨ Not sure what to choose?</h2>
-    <p>Let our AI assistant recommend the perfect bridal salon for you</p>
-
-    <button class="ai-btn">Ask Bridal Assistant</button>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="testimonials">
-    <h2>What Brides Say</h2>
-
-    <div class="testimonial-grid">
-      <div class="testimonial">“Found my perfect bridal look in minutes!”</div>
-      <div class="testimonial">“Amazing salon comparison feature.”</div>
-      <div class="testimonial">“AI assistant actually helped me decide!”</div>
+    <div class="salon-card">
+      <div class="salon-image">
+        <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=800" />
+      </div>
+      <h3>Blush & Bloom Studio</h3>
+      <div class="card-buttons">
+        <a href="#">View Salon</a>
+        <button onclick="openPopup('blush')">Quick View</button>
+      </div>
     </div>
-  </section>
 
+    <div class="salon-card">
+      <div class="salon-image">
+        <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=800" />
+      </div>
+      <h3>Urban Glow Studio</h3>
+      <div class="card-buttons">
+        <a href="#">View Salon</a>
+        <button onclick="openPopup('glow')">Quick View</button>
+      </div>
+    </div>
+
+    <div class="salon-card">
+      <div class="salon-image">
+        <img src="https://images.unsplash.com/photo-1526045478516-99145907023c?w=800" />
+      </div>
+      <h3>Meenakshi Bridal Studio</h3>
+      <div class="card-buttons">
+        <a href="#">View Salon</a>
+        <button onclick="openPopup('meenakshi')">Quick View</button>
+      </div>
+    </div>
+
+    <div class="salon-card">
+      <div class="salon-image">
+        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800" />
+      </div>
+      <h3>Elle Beauty Lounge</h3>
+      <div class="card-buttons">
+        <a href="#">View Salon</a>
+        <button onclick="openPopup('elle')">Quick View</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+  <!-- REVIEWS -->
+<section id="reviews" class="reviews">
+  <h2>Reviews</h2>
+
+  <div class="review-grid">
+    <div class="review">
+      <p>“Found my perfect bridal look in minutes!”</p>
+      <span>- Aanya Sharma</span>
+    </div>
+
+    <div class="review">
+      <p>“Amazing salon comparison feature.”</p>
+      <span>- Riya Verma</span>
+    </div>
+
+    <div class="review">
+      <p>“AI assistant actually helped me decide!”</p>
+      <span>- Meera Kapoor</span>
+    </div>
+  </div>
+</section>
+<!-- ABOUT US -->
+<section id="about-us" class="about-us">
+  <h2>About Us</h2>
+  <p>
+    BridalGlow is a modern bridal marketplace helping you discover the best salons,
+    compare services, and book your perfect bridal look with ease.
+  </p>
+</section>
   <!-- FOOTER -->
   <footer class="footer">
     <p>© 2026 BridalGlow. All rights reserved.</p>
   </footer>
+<!-- POPUP HTML goes HERE -->
+<div id="salonPopup" class="popup-overlay">
+  <div class="popup-card">
+    <h2 id="popupName"></h2>
+    <p id="popupAddress"></p>
+    <p id="popupReviews"></p>
+    <p id="popupServices"></p>
+    <p id="popupDesc"></p>
 
-  <!-- POPUP -->
-  <div id="popup" class="popup hidden">
-    <div class="popup-content">
-      <span id="closePopup">&times;</span>
-
-      <h2 id="popup-title"></h2>
-      <p id="popup-rating"></p>
-      <p id="popup-location"></p>
-      <p id="popup-price"></p>
-      <p id="popup-desc"></p>
-
-      <button>View Salon</button>
-    </div>
+    <button onclick="closePopup()">Close</button>
   </div>
-
+</div>
   <script src="app.js"></script>
+
 </body>
 </html>
